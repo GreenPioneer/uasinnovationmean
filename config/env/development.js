@@ -4,6 +4,7 @@ module.exports = {
   //db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
   db: 'mongodb://acdclive:Gbpbf4ZF66lW@ds061631.mongolab.com:61631/uasinvo',
   debug: true,
+  port:80,
   //  aggregate: 'whatever that is not false, because boolean false value turns aggregation off', //false
   aggregate: false,
   mongoose: {
