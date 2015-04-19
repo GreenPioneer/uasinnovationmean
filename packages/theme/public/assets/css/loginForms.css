@@ -55,13 +55,15 @@ background: url("/theme/assets/img/bg.png");
 }
 
 .main-form {
-    width: 748px;
-    height: 435px;
-    margin-left: -374px;
+    width: 460px;
+    height: 327px;
+    margin-left: -256px;
+    margin-top: 115px;
+    margin-bottom: 261px;
 }
 
 .main-form.register-form {
-    height: 622px;
+    height: 500px;
 }
 
 .login-form__left {
