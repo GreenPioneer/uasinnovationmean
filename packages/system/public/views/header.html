@@ -1,0 +1,93 @@
+<!-- <div class="page-header" data-ng-controller="HeaderController">
+    <div class="logo pull-left">
+        <a class="navbar-brand" ui-sref="home" mean-token="'site-title'">MEAN</a>
+    </div>
+
+    <div class="left pull-left">
+        <ul class="navbar-nav nav">
+            
+        </ul>
+    </div>
+
+    <div class="account">
+        <div class="text-edit">
+            <div class="pull-right" data-ng-show="global.authenticated" mean-token-editable></div>
+            <div class="pull-right" data-ng-show="global.authenticated" mean-translate></div>
+        </div>
+        <ul class="navbar-nav nav" data-ng-hide="global.authenticated">
+            <li><a ui-sref='auth.register'>Join</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li><a ui-sref='auth.login'>Log In</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav nav"  data-ng-show="global.authenticated">
+            <li ng-if="global.user.profile" class="dropdown" mean-profile-menu>x</li>
+            <li ng-if="!global.user.profile" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    {{global.user.name}} <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/logout">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div> -->
+<div class="container-fluid" data-ng-controller="HeaderController">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="home"><img src="http://jasonhumphrey.com/drone/logo.png" alt="DroneSolutions"> Drone<span>Solutions</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" collapse="isCollapsed">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top" ng-click="isCollapsed = !isCollapsed"></a>
+                    </li>
+                    <li>
+                        <a href="/#products" data-anchor="products" ng-click="isCollapsed = !isCollapsed">Products</a>
+                    </li>
+                    <li>
+                        <a href="/#marketplace" data-anchor="marketplace" ng-click="isCollapsed = !isCollapsed">Marketplace</a>
+                    </li>
+                    <li>
+                        <a href="/#certified" data-anchor="certified" ng-click="isCollapsed = !isCollapsed">Certification</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#!/lost/" ng-click="isCollapsed = !isCollapsed">Lost &amp; Found</a>
+                    </li>
+                    <ul class="navbar-nav nav" data-ng-hide="global.authenticated" style="  border-left: 1px solid #fff;">
+                        <li><a ui-sref='auth.register'ng-click="isCollapsed = !isCollapsed" >Join</a>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li><a ui-sref='auth.login' ng-click="isCollapsed = !isCollapsed">Log In</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav nav"  data-ng-show="global.authenticated" style="  border-left: 1px solid #fff;">
+                        <li ng-if="global.user.profile" class="dropdown" mean-profile-menu ng-click="isCollapsed = !isCollapsed">x</li>
+                        <li ng-if="!global.user.profile" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                {{global.user.name}} <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/logout" ng-click="isCollapsed = !isCollapsed">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+
+
