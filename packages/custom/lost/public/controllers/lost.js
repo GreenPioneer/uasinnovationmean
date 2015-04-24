@@ -7,23 +7,37 @@ angular.module('mean.lost').controller('LostController', ['$scope', 'Global', 'L
     $scope.package = {
       name: 'lost'
     };
-    $scope.doSomething=function(data){
+
+    $scope.message = '';
+
+    $scope.doSomething = function(data){
     	alert(data)
     }
-$scope.show ={
-	activate:false,
-	paid:false,
-	lost:false,
-	purchase:false
-};
-$scope.changeShow= function(value){
-	$scope.show[value] = !$scope.show[value];
-}
+
+		$scope.show = {
+			activate: false,
+			paid: false,
+			lost: false,
+			purchase: false
+		};
+
+		$scope.changeShow= function(value){
+			var isDisplayed = $scope.show[value];
+
+			$scope.show = {
+				activate: false,
+				paid: false,
+				lost: false,
+				purchase: false
+			};
+
+			if(!isDisplayed)
+				$scope.show[value] = true;
+		}
  
     $scope.items = ['item1', 'item2', 'item3'];
 
 	  $scope.open = function (size) {
-
 	    var modalInstance = $modal.open({
 	      templateUrl: 'myModalContent.html',
 	      controller: 'ModalInstanceCtrl',
@@ -43,20 +57,20 @@ $scope.changeShow= function(value){
 	  };
   }
 ]).directive('ngEnter', function() {
-        return {
-           controller: 'LostController',
-           link: function (scope, elements, attrs) {
-              elements.bind('keydown keypress', function (event) {
-                  if (event.which === 13) {
-                      scope.$apply(function () {
-                          scope.$eval(attrs.ngEnter);
-                      });
-                      event.preventDefault();
-                  }
-              });
-           }
-        };
+  return {
+   controller: 'LostController',
+   link: function (scope, elements, attrs) {
+    elements.bind('keydown keypress', function (event) {
+      if (event.which === 13) {
+        scope.$apply(function () {
+        	scope.$eval(attrs.ngEnter);
+        });
+        event.preventDefault();
+      }
     });
+   }
+  };
+});
 
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
