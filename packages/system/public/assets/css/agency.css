@@ -661,13 +661,13 @@ section#contact .section-heading {
 
 section#contact h3 {margin-bottom:0;}
 
-footer {
+footer#footer {
     background: #fff;
     padding: 25px 0;
     text-align: center;
 }
 
-footer span.copyright {
+footer#footer span.copyright {
     text-transform: none;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
