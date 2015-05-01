@@ -4,9 +4,9 @@ body {
   height: 100%;
 }
 
-body > div[data-ui-view] {
+.lost-page {
 	min-height: 100%;
-	height: auto;
+	height: 100%;
 	margin: 0 auto -90px;
 	padding: 90px 0;
 
@@ -15,47 +15,48 @@ body > div[data-ui-view] {
   background-attachment: fixed;
 }
 
-.lost-page {
-	padding-bottom: 50px;
+section#lost-splash {
+	padding-bottom: 250px;
 }
 
-.lost-page .subnav {
-	background: rgba(0, 0, 0, .4);
+section#lost-splash .subnav {
+	background: rgba(255, 255, 255, .4);
 	padding: 30px;
 	list-style: none;
 	margin:0;
 }
 
-.lost-page .subnav li {
+section#lost-splash .subnav li {
 	margin:0 0 8px;
 	padding:0;
 	display: inline-block;
 }
 
-.lost-page .subnav li:last-child {
+section#lost-splash .subnav li:last-child {
 	margin-bottom: 0;
 }
 
-.lost-page .subnav li a {
+section#lost-splash .subnav li a {
 	cursor: pointer;
 	margin: 0 -30px;
 	padding: 8px 30px;
 	display: block;
-	transition: all .5s ease-in-out;
+	color: #333;
+	transition: all .25s ease-in-out;
 }
 
-.lost-page .subnav li a:hover {
+section#lost-splash .subnav li a:hover {
 	text-decoration: none;
 	background: #fff;
 	color: #333;
 }
 
-.lost-page .subnav li a.active {
+section#lost-splash .subnav li a.active {
 	background: #fff;
 	color: #333;
 }
 
-.lost-page .subnav li .input {
+section#lost-splash .subnav li .input {
 	display: block;
 	margin: 0 -30px;
 	padding: 8px 30px;
@@ -63,21 +64,180 @@ body > div[data-ui-view] {
 	border-bottom: 1px solid #ccc;
 }
 
-.lost-page .splash > h1 {
+section#lost-splash h1 {
 	color: #fff;
 	text-shadow: 0 2px 1px rgba(0, 0, 0, .4);
-	margin-top: 200px;
+	margin-top: 120px;
 	margin-bottom: 15px;
 }
 
-.lost-page .splash > h3 {
+section#lost-splash h3 {
 	color: #fff;
 	text-shadow: 0 2px 1px rgba(0, 0, 0, .4);
 	margin: 15px 0;
 }
 
 @media (max-width: 991px) {
-	.lost-page .splash > h1 {
-		margin-top: 50px;
+	section#lost-splash {
+		padding-bottom: 100px;
+	}
+
+	section#lost-splash h1 {
+		margin-top: 100px;
+	}
+}
+
+.lost-page > section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+section#intro {
+	background: rgba(0, 0, 0, .9);
+	color: #fff;
+	text-align: center;
+}
+
+section#services {
+	padding-top: 0;
+	background: rgba(248,141,69, .75);
+}
+
+section#services > header {
+	margin-bottom: 100px;
+}
+
+section#services .btn-group {
+    margin:  0 0 25px;
+}
+
+section#services .btn-group label {
+    padding:15px;
+    box-shadow: none;
+}
+
+section#services .btn-group label.active,
+section#services .btn-group label:hover
+ {
+    background: #2897ec;
+    border-color: #0465AF;
+    color: #fff;
+    box-shadow: none;
+}
+
+section#services .input-group input {
+	border: none;
+	border-radius: 0;
+	padding: 15px;
+	line-height: 24px;
+	display: inline-block;
+	height: 54px;
+}
+
+section#services .input-group button {
+	border: none;
+	border-radius: 0;
+	display: inline-block;
+	background-color: transparent;
+	padding: 15px;
+	line-height: 24px;
+	height: 54px;
+	vertical-align: top;
+}
+
+section#services .input-group button:hover,
+section#services .input-group button.hover,
+section#services .input-group button:focus,
+section#services .input-group button.focus,
+section#services .input-group button:active,
+section#services .input-group button.active {
+	border: none;
+	background-color: rgba(255, 255, 255, .75);
+	color: rgba(248,141,69, 1);
+	box-shadow: none;
+}
+
+section#testimonials {
+	background: rgba(255, 255, 255, .9);
+}
+
+section#testimonials img.img-circle {
+	max-height: 125px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+section#testimonials blockquote {
+	margin:20px 0;
+	border-left-color: #f88d45;
+}
+
+#testimonials .carousel-control {
+  text-shadow: none;
+  color: rgba(4, 101, 175, 1);
+}
+
+#testimonials .carousel-control:hover,
+#testimonials .carousel-control:focus {
+  color: rgba(40, 151, 236, 1);
+}
+
+#testimonials .carousel-control.left,
+#testimonials .carousel-control.right {
+  background: none;
+}
+
+#testimonials .carousel-indicators li {
+  background-color: rgba(4, 101, 175, .33);
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  border: none;
+}
+
+#testimonials .carousel-indicators li.active {
+  background-color: rgba(4, 101, 175, 1);
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+#testimonials .carousel-indicators li:last-child {
+  margin-right: 0;
+}
+
+section#packages .package {
+	background: rgba(255, 255, 255, 1);
+	padding-top: 100px;
+	text-align: center;
+
+}
+
+section#packages .package h3 {
+	margin-top: 0;
+}
+
+section#packages .package ul,
+section#packages .package li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+section#packages .package .btn {
+	border:none;
+	border-radius:0;
+	margin-top: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+	section#packages .package {
+		margin-bottom: 30px;
+	}
+
+	section#packages .package:last-child {
+		margin-bottom: 0;
 	}
 }
