@@ -71,9 +71,10 @@ section#lost-splash h1 {
 	margin-bottom: 15px;
 }
 
-section#lost-splash h3 {
+section#lost-splash h4 {
 	color: #fff;
 	text-shadow: 0 2px 1px rgba(0, 0, 0, .4);
+	font-size: 150%;
 	margin: 15px 0;
 }
 
@@ -98,17 +99,32 @@ section#intro {
 	text-align: center;
 }
 
-section#services {
-	padding-top: 0;
-	background: rgba(248,141,69, .75);
+section#services .services .service h2 {
+	padding: 30px;
+	margin-bottom: 30px;
+	background: #fff;
+	cursor: pointer;
 }
 
-section#services > header {
-	margin-bottom: 100px;
+section#services .services .service.active h2,
+section#services .services .service:hover h2 {
+	background: #f88d45;
+	color: #fff;
+}
+
+section#services .service-input {
+	padding: 30px;
+	background: rgba(0, 0, 0, .8);
+}
+
+section#services .service-input p {
+	color: #fff;
+	font-size: 16px;
+	margin: 0 30px 20px;
 }
 
 section#services .btn-group {
-    margin:  0 0 25px;
+    margin:  30px 0 0;
 }
 
 section#services .btn-group label {
@@ -152,8 +168,7 @@ section#services .input-group button.focus,
 section#services .input-group button:active,
 section#services .input-group button.active {
 	border: none;
-	background-color: rgba(255, 255, 255, .75);
-	color: rgba(248,141,69, 1);
+	color: #2897ec;
 	box-shadow: none;
 }
 
@@ -240,4 +255,14 @@ section#packages .package .btn {
 	section#packages .package:last-child {
 		margin-bottom: 0;
 	}
+}
+
+section#in-depth {
+	background: rgba(4, 101, 175, .9);
+	color: #fff;
+	text-align: center;
+}
+
+section#in-depth p {
+	font-size: 16px;
 }

@@ -36,9 +36,9 @@
       	</div>
       	<div class="col-xs-12 col-md-7 text-center text-right-md text-right-lg splash">
       			<h1>Lost &amp; Found Drone Services</h1>
-      			<h3>We can help find your drone.</h3>
+      			<h4>We can help find your drone.</h4>
 
-      			<a class="btn btn-primary btn-lg">Find Out More</a>
+      			<a class="btn btn-orange btn-lg">Find Out More</a>
       	</div>
       </div>
     </div>
@@ -50,38 +50,34 @@
         <div class="col-xs-10 col-xs-offset-1 col-xscol-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0 text-center">
           <h2>Drones are lost and found every day.</h2>
           <h4>We put up reward money to help get your drone back.</h4>
-          <a class="btn btn-lg btn-primary">sign up today</a>
+          <a class="btn btn-lg btn-orange">sign up today</a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="services">
-    <header>
-      <h1>Get Started</h1>
-    </header>
     <form>
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 text-center">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                  <input type="radio" id="activate" name="service" value="activate" checked="checked" /> Activate a Drone
-              </label>
-              <label class="btn btn-default">
-                  <input type="radio" id="report" name="service" value="report" /> Report a Missing Drone
-              </label>
-              <label class="btn btn-default">
-                  <input type="radio" id="found" name="service" value="found" /> I've Found a Drone
-              </label>
+          <div class="col-xs-12 text-center services" ng-init="service=false; serviceMessage=false">
+            <div class="col-xs-12 col-sm-4 service" ng-click="service='activate';serviceMessage='Enter the sticker id below to activate your drone.'" ng-class="{active: service == 'activate'}">
+              <h2>Activate a Drone</h2>
+            </div>
+            <div class="col-xs-12 col-sm-4 service" ng-click="service='report';serviceMessage='Enter your sticker id below or login to report your drone lost.'" ng-class="{active: service == 'report'}">
+              <h2>Report a Missing Drone</h2>
+            </div>
+            <div class="col-xs-12 col-sm-4 service" ng-click="service='found';serviceMessage='Enter the sticker id on the drone to report the drone missing and collect your reward.'" ng-class="{active: service == 'found'}">
+              <h2>I've Found a Drone</h2>
             </div>
           </div>
 
-          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center service-input" ng-hide="!service">
+            <p>{{serviceMessage}}</p>
             <div class="input-group">
               <input class="form-control" placeholder="enter id" required>
               <span class="input-group-btn">
-                <button class="btn btn-lg btn-primary">submit</button>
+                <button class="btn btn-lg btn-orange">submit</button>
               </span>
             </div>
           </div>
@@ -210,6 +206,19 @@
     </div>
   </section>
 
+  <section id="in-depth">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-xscol-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0 text-center">
+          <h2>Is your drone protected?</h2>
+          <p>Drones are lost and found every day.  Even the best drone pilot has crashed or ran out of power and recovery isn't always so simple.</p>
+          <p>We put up reward money so the person who finds your drone returns it.</p>
+          <a class="btn btn-lg btn-orange">sign up today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
       <div class="container">
           <div class="row">
@@ -222,7 +231,7 @@
 
                       <input type="text" name="_gotcha" style="display:none" />
                       <br />
-                      <button type="submit" class="btn btn-lg btn-primary">Send</button>
+                      <button type="submit" class="btn btn-lg btn-orange">Send</button>
                   </form>
               </div>
           </div>
