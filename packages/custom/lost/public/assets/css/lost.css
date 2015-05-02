@@ -172,17 +172,19 @@ section#services .input-group button.active {
 	box-shadow: none;
 }
 
-section#testimonials {
+#testimonials {
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background: rgba(255, 255, 255, .9);
 }
 
-section#testimonials img.img-circle {
+#testimonials img.img-circle {
 	max-height: 125px;
 	text-align: center;
 	margin: 0 auto;
 }
 
-section#testimonials blockquote {
+#testimonials blockquote {
 	margin:20px 0;
 	border-left-color: #f88d45;
 }
