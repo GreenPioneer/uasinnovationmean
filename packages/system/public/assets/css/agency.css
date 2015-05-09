@@ -247,7 +247,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-nav>li>a {padding-top:0;padding-bottom:0;line-height:50px;}
 
     .navbar-default {
-        padding: 20px 0;
+        padding: 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
