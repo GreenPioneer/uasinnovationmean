@@ -251,7 +251,7 @@ section#packages .package .btn {
 
 @media (max-width: 991px) {
 	section#packages .package {
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 
 	section#packages .package:last-child {
